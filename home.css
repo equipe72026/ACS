@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+
+    /* BACKGROUND */
+    background-image: url("img/trasno.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+}
+
+/* HEADER */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    
+}
+
+.logo {
+    width: 120px;
+}
+
+/* NAV */
+nav {
+    background-color: rgb(16, 158, 163);
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.listabutao {
+    list-style: none;
+    display: flex;
+}
+
+.listabutao li {
+    margin-left: 15px;
+}
+
+.listabutao a {
+    text-decoration: none;
+    color: black;
+    background-color: white;
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.listabutao a:hover {
+    background-color: #00bcd4;
+}
+
+/* TÍTULO */
+.titulo {
+    text-align: center;
+    margin: 20px 0;
+    background-color: rgb(16, 158, 163);
+}
+
+/* CONTAINER */
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    padding: 40px;
+}
+
+/* IMAGENS */
+.container img {
+    width: 250px;
+    border-radius: 10px;
+}
+
+/* TEXTO */
+.texto {
+    max-width: 450px;
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.texto h2 {
+    margin-bottom: 10px;
+}
+
+.texto p {
+    margin-bottom: 15px;
+}
+
+/* LISTA */
+.lista {
+    margin-bottom: 20px;
+}
+
+/* BOTÃO */
+.botaoacs {
+    display: inline-block;
+    text-decoration: none;
+    background-color: rgb(16, 158, 163);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 6px;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        text-align: center;
+    }
+}

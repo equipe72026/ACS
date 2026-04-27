@@ -1,0 +1,69 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    background-image: url("img/trasno.png");
+}
+
+/* NAV */
+nav {
+    background-color: #109ea3;
+    color: white;
+    padding: 15px 20px;
+}
+
+/* CONTAINER */
+.container {
+    max-width: 1000px;
+    margin: 30px auto;
+    text-align: center;
+}
+
+/* GRID */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+/* CARD */
+.card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* INPUT */
+.card input {
+    width: 80%;
+    padding: 10px;
+    font-size: 18px;
+    text-align: center;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+/* EFEITO AO CLICAR */
+.card input:focus {
+    border-color: #109ea3;
+}
+.botaosair{
+    display: inline-block;
+    text-decoration: none;
+    background-color: rgb(16, 158, 163);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 6px;
+}
+input[type="sairmenu"]{
+    font-size: 16px;
+    padding: 5px 10px;
+    border: none;
+    background-color: #109ea3;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+}
