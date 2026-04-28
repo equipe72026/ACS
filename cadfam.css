@@ -1,0 +1,14 @@
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* espaço entre os campos */
+    max-width: 400px;
+  }
+  
+  label {
+    font-weight: bold;
+  }
+  
+  input, select, button {
+    width: 100%;
+  }

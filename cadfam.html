@@ -4,9 +4,103 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="cadfam.css">
     <title>Cadastrar Familia</title>
 </head>
 <body>
-    Pagina em construção
+    <!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Controle de Visitas - Agente de Saúde</title>
+  
+</head>
+<body>
+
+<h2>Cadastrar Membros</h2>
+
+<form id="formVisita">
+  <label>Membros da familia:</label>
+  <input type="text" id="casa" required>
+
+  <label>Hipertenso:</label>
+  <select id="hipertenso">
+    <option value="0">Não</option>
+    <option value="1">Sim</option>
+  </select>
+
+  <label>Vacina atrasada:</label>
+  <select id="vacina">
+    <option value="0">Não</option>
+    <option value="1">Sim</option>
+  </select>
+
+  <label>Gestante:</label>
+  <select id="prenatal">
+    <option value="1">Sim</option>
+    <option value="0">Não</option>
+  </select>
+
+
+  <a href="acsarea.html"><button type="button" onclick="adicionarVisita()">Adicionar Membro</button></a>
+</form>
+
+<div class="relatorio">
+  <h2>Relatório Automático</h2>
+  <p>Visitas feitas: <span id="visitas">0</span></p>
+  <p>Gestantes: <span id="gestantes">0</span></p>
+  <p>Hipertensos: <span id="hipertensos">0</span></p>
+
+  
+</div>
+
+<script>
+  let visitas = 0;
+  let gestantes = 0;
+  let hipertensos = 0;
+
+  function adicionarVisita() {
+    visitas++;
+
+    let gestante = parseInt(document.getElementById("gestante").value);
+    let hipertenso = parseInt(document.getElementById("hipertenso").value);
+    let vacina = parseInt(document.getElementById("vacina").value);
+    let prenatal = parseInt(document.getElementById("prenatal").value);
+    let idoso = parseInt(document.getElementById("idoso").value);
+    let casa = document.getElementById("casa").value;
+
+    if (gestante) gestantes++;
+    if (hipertenso) hipertensos++;
+
+    document.getElementById("visitas").innerText = visitas;
+    document.getElementById("gestantes").innerText = gestantes;
+    document.getElementById("hipertensos").innerText = hipertensos;
+
+    let listaAlertas = document.getElementById("alertas");
+
+    if (vacina) {
+      let li = document.createElement("li");
+      li.innerText = casa + " - Vacina atrasada";
+      listaAlertas.appendChild(li);
+    }
+
+    if (!prenatal) {
+      let li = document.createElement("li");
+      li.innerText = casa + " - Pré-natal pendente";
+      listaAlertas.appendChild(li);
+    }
+
+    if (idoso) {
+      let li = document.createElement("li");
+      li.innerText = casa + " - Idoso sem visita";
+      listaAlertas.appendChild(li);
+    }
+
+    document.getElementById("formVisita").reset();
+  }
+</script>
+
+</body>
+</html>
 </body>
 </html>
